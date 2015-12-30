@@ -192,6 +192,7 @@
     <Compile Include="Common\WebIoc.cs" />
     <Compile Include="Controllers\DataController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\JsonController.cs" />
     <Compile Include="Controllers\RabbitMQController.cs" />
     <Compile Include="Controllers\RedisController.cs" />
     <Compile Include="Controllers\XmlController.cs" />
@@ -241,6 +242,7 @@
     <Content Include="Views\Redis\Index.cshtml" />
     <Content Include="Views\Redis\Index1.cshtml" />
     <Content Include="Views\Redis\Index2.cshtml" />
+    <Content Include="Views\Json\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
