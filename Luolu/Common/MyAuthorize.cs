@@ -6,6 +6,9 @@ using System.Web.Mvc;
 
 namespace Luolu.Common
 {
+    /// <summary>
+    /// 权限验证的attribute
+    /// </summary>
     public class MyAuthorize : AuthorizeAttribute
     {
 
