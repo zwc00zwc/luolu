@@ -1,0 +1,7 @@
+E:\zhengwc\Luolu\MyFramework\bin\Debug\MyFramework.dll
+E:\zhengwc\Luolu\MyFramework\bin\Debug\MyFramework.pdb
+E:\zhengwc\Luolu\MyFramework\bin\Debug\System.Web.Mvc.dll
+E:\zhengwc\Luolu\MyFramework\bin\Debug\System.Web.Mvc.xml
+E:\zhengwc\Luolu\MyFramework\bin\Debug\zh-Hans\System.Web.Mvc.resources.dll
+E:\zhengwc\Luolu\MyFramework\obj\Debug\MyFramework.dll
+E:\zhengwc\Luolu\MyFramework\obj\Debug\MyFramework.pdb

@@ -1,0 +1,42 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <script type="text/javascript" src="/Scripts/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="/Scripts/jquery.validate.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('#btn1').click(function () {
+                //$.post("http://localhost:10345/api/Home/", {}, function (msg) {
+                //    alert(msg);
+                //})
+                $.ajax({
+                    type: "GET",
+                    url: "http://localhost:10345/api/User/Get?name=zhangsan&password=123456",
+                    dataType: 'JSON',
+                    success: function (data) {
+                        if (!data) {
+                            alert('请求之后为空');
+                        } else {
+                            alert(data);
+                        }
+                    }
+                })
+            })
+        })
+    </script>
+</head>
+<body>
+    <h1>@ViewBag.num</h1>
+    <div> 
+        <input type="button" id="btn1" value="按钮" />
+    </div>
+</body>
+</html>
