@@ -8,6 +8,8 @@ using System.Xml;
 using System.Xml.Linq;
 using ZF.XML;
 using ZF.Log;
+using ConfigFramework;
+using ConfigFramework.ConfigManger;
 
 namespace Luolu.Controllers
 {
@@ -84,6 +86,13 @@ namespace Luolu.Controllers
                 ps = XMLHelper.DeserializeXmlFile(fs, typeof(PersonSet)) as PersonSet;
             }
             return View(ps);
+        }
+
+        public ActionResult Index4()
+        {
+            string aaa = ConfigMangerHelper.Get<string>("Luolu");
+            //Common.Test.Instance().fangfa(true);
+            return View();
         }
 	}
 

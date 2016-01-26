@@ -27,19 +27,19 @@ namespace Luolu.Controllers
         // GET: /Home/
         public ActionResult Index()
         {
-            var salt = Guid.NewGuid().ToString();
-            Cache cache = new Cache();
-            string url = "";
-            //DataTable dt = SqlHelper.Read("select * from UrlList where U_Id=@Uid", new SqlParameter[] { new SqlParameter("@Uid", 13928) });
-            DataTable dt = SqlHelper.Read("select count(1) as 'count' from UrlList");
-            if (dt.Rows.Count > 0)
-            {
-                for (int i = 0; i < dt.Rows.Count; i++)
-                {
-                    url = dt.Rows[i]["count"].ToString();
-                }
-            }
-            ViewBag.url = url;
+            //var salt = Guid.NewGuid().ToString();
+            //Cache cache = new Cache();
+            //string url = "";
+            ////DataTable dt = SqlHelper.Read("select * from UrlList where U_Id=@Uid", new SqlParameter[] { new SqlParameter("@Uid", 13928) });
+            //DataTable dt = SqlHelper.Read("select count(1) as 'count' from UrlList");
+            //if (dt.Rows.Count > 0)
+            //{
+            //    for (int i = 0; i < dt.Rows.Count; i++)
+            //    {
+            //        url = dt.Rows[i]["count"].ToString();
+            //    }
+            //}
+            //ViewBag.url = url;
             return View();
         }
 

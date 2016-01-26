@@ -58,6 +58,10 @@
     <Reference Include="Common.Logging">
       <HintPath>lib\Common.Logging.dll</HintPath>
     </Reference>
+    <Reference Include="ConfigFramework, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ConfigFramework\ConfigFramework\bin\Debug\ConfigFramework.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -190,6 +194,7 @@
     <Compile Include="Common\MySqlHelper.cs" />
     <Compile Include="Common\RedisHelper.cs" />
     <Compile Include="Common\SqlHelper.cs" />
+    <Compile Include="Common\Test.cs" />
     <Compile Include="Common\Utility.cs" />
     <Compile Include="Common\VerifyModule.cs" />
     <Compile Include="Common\WebIoc.cs" />
@@ -261,6 +266,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Area\Models\" />
     <Folder Include="Areas\Area\Views\Shared\" />
+    <Folder Include="Views\Config\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
