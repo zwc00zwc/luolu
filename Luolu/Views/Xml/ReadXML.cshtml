@@ -1,0 +1,32 @@
+﻿@model Luolu.Controllers.PersonSet
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ReadXML</title>
+</head>
+<body>
+    <div> 
+        <table>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Age</th>
+            </tr>
+            @foreach (var item in Model.PersonList)
+            { 
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Name</td>
+                    <td>@item.Age</td>
+                </tr>
+            }
+        </table>
+    </div>
+</body>
+</html>

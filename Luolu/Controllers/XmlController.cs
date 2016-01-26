@@ -6,6 +6,8 @@ using System.Web;
 using System.Web.Mvc;
 using System.Xml;
 using System.Xml.Linq;
+using ZF.XML;
+using ZF.Log;
 
 namespace Luolu.Controllers
 {
@@ -42,5 +44,58 @@ namespace Luolu.Controllers
             }
             return View();
         }
+
+        public ActionResult CreateXML()
+        {
+            string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Config", "Person.xml");
+            string error = "";
+            try
+            {
+                using (FileStream fs = new FileStream(path, FileMode.OpenOrCreate, FileAccess.ReadWrite, FileShare.Read))
+                {
+                    List<Person> list = new List<Person>();
+                    list.Add(new Person() { Id = 1, Name = "张三", Age = "20" });
+                    list.Add(new Person() { Id = 2, Name = "李四", Age = "20" });
+                    list.Add(new Person() { Id = 3, Name = "王五", Age = "20" });
+
+                    PersonSet ps = new PersonSet();
+                    ps.PersonList = list;
+
+                    XMLHelper.serializeXmlFile(fs, typeof(PersonSet), ps);
+                    LogHelper.WriteInfo("成功插入xml");
+                    error = "成功";
+                }
+            }
+            catch (Exception ex)
+            {
+                LogHelper.WriteError(ex);
+                error = "失败";
+            }
+            ViewBag.error = error;
+            return View();
+        }
+
+        public ActionResult ReadXML()
+        {
+            string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Config", "Person.xml");
+            PersonSet ps = new PersonSet();
+            using (FileStream fs = new FileStream(path, FileMode.OpenOrCreate, FileAccess.Read, FileShare.ReadWrite))
+            {
+                ps = XMLHelper.DeserializeXmlFile(fs, typeof(PersonSet)) as PersonSet;
+            }
+            return View(ps);
+        }
 	}
+
+    public class PersonSet
+    {
+        public List<Person> PersonList { get; set; }
+    }
+
+    public class Person
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Age { get; set; }
+    }
 }

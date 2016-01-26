@@ -156,6 +156,9 @@
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
     <Reference Include="System.Xml.Linq" />
+    <Reference Include="ZF">
+      <HintPath>..\..\ZF\ZF\ZF\bin\Debug\ZF.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="config\XMLFile1.xml">
@@ -243,6 +246,10 @@
     <Content Include="Views\Redis\Index1.cshtml" />
     <Content Include="Views\Redis\Index2.cshtml" />
     <Content Include="Views\Json\Index.cshtml" />
+    <Content Include="Views\Json\Index1.cshtml" />
+    <Content Include="Views\Json\Index2.cshtml" />
+    <Content Include="Views\Xml\ReadXML.cshtml" />
+    <Content Include="Views\Xml\CreateXML.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<PersonSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <PersonList>
+    <Person>
+      <Id>1</Id>
+      <Name>张三</Name>
+      <Age>20</Age>
+    </Person>
+    <Person>
+      <Id>2</Id>
+      <Name>李四</Name>
+      <Age>20</Age>
+    </Person>
+    <Person>
+      <Id>3</Id>
+      <Name>王五</Name>
+      <Age>20</Age>
+    </Person>
+  </PersonList>
+</PersonSet>
