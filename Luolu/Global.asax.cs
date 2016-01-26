@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 using MyFramework;
+using ZF.Log;
 
 namespace Luolu
 {
@@ -15,6 +16,7 @@ namespace Luolu
     {
         protected void Application_Start()
         {
+            LogHelper.Configure();
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
         }
